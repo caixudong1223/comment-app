@@ -12,8 +12,6 @@ class CommentApp extends Component {
     //当某个状态被多个组件依赖或者影响的时候，就把该状态提升到这些组件的最近公共父组件中去管理，
     //用 props 传递数据或者函数来管理这种依赖或着影响的行为。
 
-    
-
     _loadComments(){
         let comments = localStorage.getItem('comments')
         comments = JSON.parse(comments)
@@ -40,7 +38,6 @@ class CommentApp extends Component {
     }
 
     handleDeleteComment(index) {
-        // console.log(index)
         const comments = this.state.comments
         comments.splice(index, 1)
         this.setState({comments})
